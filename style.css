@@ -12,8 +12,8 @@ body {
 
 /* Header styles */
 header {
-    background-color: #005792;
-    color: white;
+    background-color: #D3D3D3;
+    color: #088F8F;
     padding: 20px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -70,8 +70,35 @@ h2 {
     gap: 20px;
 }
 
+/* ... (previous CSS styles) */
+
+/* Gallery styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Set a fixed size for images in the gallery */
 .image-gallery img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Adjust this value to control image width */
+    max-height: 200px; /* Set the maximum height to maintain aspect ratio */
+    object-fit: cover; /* Preserve aspect ratio and cover the container */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/* Logo and text styles*/
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Adjust the logo width as needed */
+    height: auto;
+    margin-right: 10px; /* Add spacing between the logo and text */
+}
+
+.logo h1 {
+    margin: 0; /* Remove default margin for <h1> */
+    font-size: 24px; /* Adjust the font size as needed */
 }
